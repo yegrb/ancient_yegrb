@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: yegrb_dev
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: yegrb_test
+  host: localhost
