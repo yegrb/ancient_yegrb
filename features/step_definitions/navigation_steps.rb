@@ -12,6 +12,9 @@ When /^I press "([^\"]*)"$/ do |button|
   click_button(button)
 end
 
+When /^I press the "(.*?)" button$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
 When /^I click "([^\"]*)"$/ do |link|
   click_link(link)
 end
