@@ -1,7 +1,7 @@
 Feature: Next Event
 	As a YEGrb organizer,
 	trying to quickly broadcast events,
-	I expect the "Next Event" on the website to update automatically from the YEGrb calendar.
+	I can see the next event on the homepage.
 
 	Scenario: See the next event on the homepage
 		Given I am on the homepage

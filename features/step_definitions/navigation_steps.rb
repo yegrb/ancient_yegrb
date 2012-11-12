@@ -4,10 +4,6 @@ Given /^I am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
-Given /^there is an event called "(.*?)" on "(.*?)"$/ do |name, date|
-  # Event.create(:name => name, starts_on => date)
-end
-
 When /^I go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
