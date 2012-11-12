@@ -4,8 +4,8 @@ Feature: Next Event
 	I can see the next event on the homepage.
 
 	Scenario: See the next event on the homepage
-		Given I am on the homepage
-		And there is an event called "November Meetup" on "10-Nov-2012"
+		Given there is an event called "November Meetup" on "10-Nov-2012"
+		And I am on the homepage
 		Then I should see "Next Event"
 		And I should see "November Meetup"
 		And I should see "10-Nov-2012"
