@@ -3,6 +3,8 @@
 <h1>Next Event</h1>
 <% if @next_event %>
   <h2><%= @next_event.name %> on <span class="event-start-date"><%= l(@next_event.starts, :format => :date_only) %></span></h2>
+  <h3><%= @next_event.location %></h3>
+  <div><%=@next_event.description %></div>
 <% else %>
   <p>No upcoming events</p>
 <% end %>

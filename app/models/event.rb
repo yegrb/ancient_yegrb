@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  attr_accessible :name, :starts
+  attr_accessible :name, :starts, :location, :description
 
   scope :upcoming, lambda { where("starts >= ?", DateTime.now) }
   scope :ordered, order("starts ASC")
