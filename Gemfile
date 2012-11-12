@@ -36,6 +36,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'timecop'
 end
 
 # To use ActiveModel has_secure_password
