@@ -130,6 +130,8 @@ GEM
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     rake (0.9.2.2)
+    rb-fsevent (0.9.1)
+    rb-readline (0.4.2)
     rdoc (3.12)
       json (~> 1.4)
     rspec (2.6.0)
@@ -193,6 +195,8 @@ DEPENDENCIES
   less-rails
   pg
   rails (= 3.2.8)
+  rb-fsevent (~> 0.9.1)
+  rb-readline
   rspec-rails
   sass-rails (~> 3.2.3)
   therubyracer
