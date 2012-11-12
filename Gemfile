@@ -28,6 +28,7 @@ gem 'jquery-rails'
 group :test, :development do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'guard-cucumber'
   gem 'guard-rspec'
   gem 'rspec-rails'
 end
