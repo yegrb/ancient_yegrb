@@ -1,6 +1,10 @@
 <section>
 <article>
 <h1>Next Event</h1>
-<h2><%= @next_event.name %> on <span class="event-start-date"><%= l(@next_event.starts, :format => :date_only) %></span></h2>
+<% if @next_event %>
+  <h2><%= @next_event.name %> on <span class="event-start-date"><%= l(@next_event.starts, :format => :date_only) %></span></h2>
+<% else %>
+  <p>No upcoming events</p>
+<% end %>
 </article>
 </section>

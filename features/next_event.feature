@@ -29,3 +29,9 @@ Feature: Next Event
 		Then I should see "Next Event"
 		And I should see "October Meetup"
 		And I should see "15-Oct-2012"
+
+	Scenario: When there are no upcoming events
+		Given I am on the homepage
+		Then I should see "Next Event"
+		And I should see "No upcoming events"
+
