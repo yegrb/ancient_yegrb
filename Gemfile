@@ -11,6 +11,9 @@ gem 'pg'
 # ActiveAdmin provides the admin interface for now
 gem 'activeadmin'
 
+# We manage required processes with Foreman
+gem 'foreman'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
