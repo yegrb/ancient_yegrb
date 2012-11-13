@@ -3,5 +3,5 @@ Given /^there is an event called "(.*?)" on "(.*?)" in "(.*?)" about "(.*?)"$/ d
 end
 
 Then /^I see I have RSVPed$/ do
-  page.should have_content("Joined")
+  page.should have_content("joined")
 end

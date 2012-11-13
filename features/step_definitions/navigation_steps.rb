@@ -13,7 +13,6 @@ When /^I press "([^\"]*)"$/ do |button|
 end
 
 When /^I press the "(.*?)" button$/ do |button|
-  pending
   click_button(button)
 end
 
@@ -91,4 +90,8 @@ end
 
 Then /^page should have (.+) message "([^\"]*)"$/ do |type, text|
   page.has_css?("p.#{type}", :text => text, :visible => true)
+end
+
+Then /^I see the "(.*?)" button$/ do |button|
+  page.should have_button(button)
 end

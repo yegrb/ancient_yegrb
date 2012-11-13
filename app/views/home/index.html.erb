@@ -5,7 +5,19 @@
   <h2><%= @next_event.name %> on <span class="event-start-date"><%= l(@next_event.starts, :format => :date_only) %></span></h2>
   <h3><%= @next_event.location %></h3>
   <div><%=@next_event.description %></div>
-  <div><button>Join</button></div>
+  <div>
+    <% if @next_event_attendance.new_record? %>
+      <%= form_for @next_event_attendance do |f| %>
+        <%= f.hidden_field(:event_id) %>
+        <%= f.submit %>
+      <% end %>
+    <% else %>
+      <%= form_for @next_event_attendance, :method => "DELETE" do |f| %>
+        <%= f.hidden_field(:id) %>
+        <%= f.submit %>
+      <% end %>
+    <% end %>
+  </div>
 <% else %>
   <p>No upcoming events</p>
 <% end %>
