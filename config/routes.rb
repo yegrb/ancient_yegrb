@@ -1,4 +1,6 @@
 YegrbCom::Application.routes.draw do
+  resources :event_attendances, :only => [:create, :destroy]
+
   devise_for :users
 
   ActiveAdmin.routes(self)
