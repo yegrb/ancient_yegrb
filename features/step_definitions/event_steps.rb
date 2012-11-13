@@ -3,5 +3,5 @@ Given /^there is an event called "(.*?)" on "(.*?)" in "(.*?)" about "(.*?)"$/ d
 end
 
 Then /^I see I have RSVPed$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content("Joined")
 end

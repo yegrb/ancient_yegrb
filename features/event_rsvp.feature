@@ -8,12 +8,12 @@ Feature: RSVPing for Events
 		And today is "01-Nov-2012"
 		And there is an event called "November Meetup" on "10-Nov-2012" in "The UofA CompSci Building" about "Stuff"
 		And I am on the homepage
-		When I press the "RSVP" button
+		When I press the "Join" button
 		Then I see I have RSVPed
 
 	Scenario: RSVP for an event on the homepage when logged out
 		Given today is "01-Nov-2012"
 		And there is an event called "November Meetup" on "10-Nov-2012" in "The UofA CompSci Building" about "Stuff"
 		And I am on the homepage
-		When I press the "RSVP" button
+		When I press the "Join" button
 		Then I should be on the login page
