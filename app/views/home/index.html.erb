@@ -5,6 +5,7 @@
   <h2><%= @next_event.name %> on <span class="event-start-date"><%= l(@next_event.starts, :format => :date_only) %></span></h2>
   <h3><%= @next_event.location %></h3>
   <div><%=@next_event.description %></div>
+  <div><%=@next_event.attendees.count %> <%= "attendee".pluralize(@next_event.attendees.count) %> </div>
   <div>
     <% if @next_event_attendance.new_record? %>
       <%= form_for @next_event_attendance do |f| %>
