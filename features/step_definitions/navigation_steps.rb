@@ -95,3 +95,7 @@ end
 Then /^I see the "(.*?)" button$/ do |button|
   page.should have_button(button)
 end
+
+Then /^I should see a link called "(.*?)" to "(.*?)"$/ do |title, target|
+  page.should have_link(title, :href => target)
+end

@@ -11,6 +11,7 @@ Feature: RSVPing for Events
 		When I press the "Join" button
 		Then I see I have RSVPed
 		And I see the "Leave" button
+		And I should see "1 attendee"
 
 	Scenario: RSVP for an event on the homepage when logged out
 		Given today is "01-Nov-2012"

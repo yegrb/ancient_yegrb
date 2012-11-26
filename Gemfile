@@ -14,6 +14,8 @@ gem 'activeadmin'
 # We manage required processes with Foreman
 gem 'foreman'
 
+# Used to publish in iCalendar format
+gem 'icalendar'
 
 # Gems used only for assets and not required
 # in production environments by default.
