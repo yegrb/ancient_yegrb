@@ -1,0 +1,55 @@
+.container {
+	padding: 15px 0;
+}
+
+header h1 {
+	display: inline-block;
+}
+
+header h2 {
+	display: inline-block;
+	color: #aaaaaa;
+}
+
+header {
+	padding: 10px 0;
+}
+
+.event {
+  .date, .details {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .date {
+    padding: 0 80px 0 0;
+
+    text-align: center;
+
+    .weekday, .day, .month {
+      display: block;
+    }
+
+    .day {
+      font-size: 100px;
+      line-height: 100px;
+      font-weight: bold;
+    }
+
+    .month, .weekday {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      background-color: #333333;
+      color: #cccccc;
+    }
+  }
+
+  .details {
+    display: inline-block;
+    width: 600px;
+
+    h1 {
+      margin: 0;
+    }
+  }
+}
