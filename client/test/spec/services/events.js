@@ -11,8 +11,11 @@ describe('Service: events', function () {
     events = _events_;
   }));
 
-  it('should do something', function () {
-    expect(!!events).toBe(true);
+  describe('requestNextEvent', function() {
+    it('returns a promise that is resolved with the value of the next event', function () {
+      expect(events.requestNextEvent()).toBeDefined();
+    });
   });
+
 
 });
