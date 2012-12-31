@@ -64,12 +64,6 @@ describe('Controller: MainCtrl', function() {
     // and voila. Magic! :)
     rootScope.$digest();
 
-    waitsFor(function() {
-      return mockEvents.resolved;
-    }, 'requestNextEvent did not resolve', 5000);
-
-    runs(function() {
-      expect(scope.nextEvent).toBeDefined();
-    });
+    expect(scope.nextEvent).toBeDefined();
   });
 });
