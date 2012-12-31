@@ -1,6 +1,6 @@
 'use strict';
 
-clientApp.factory('events', function($q) {
+clientApp.factory('events', [ "$q", function($q) {
 
   // Public API here
   return {
@@ -21,4 +21,4 @@ clientApp.factory('events', function($q) {
       return deferred.promise;
     }
   };
-});
+}]);
