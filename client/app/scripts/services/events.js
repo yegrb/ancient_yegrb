@@ -12,7 +12,7 @@ clientApp.factory('events', [ "$q", function($q) {
       deferred.resolve({
         name: "Meetup",
         description: "Join us this month for talks on integrating AngularJS with Rails, RubyFlux, and the new Reel server.",
-        startsOn: new Date(2012, 12, 29, 18, 30),
+        startsOn: new Date(2013, 0, 15, 18, 30),
         venueAddress: "1234 Not Real Street",
         venueUrl: "http://ualberta.net",
         rsvpUrl: "http://plus.com"
