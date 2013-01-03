@@ -44,6 +44,7 @@ GEM
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (3.0.2)
+    backports (2.6.5)
     bcrypt-ruby (3.0.1)
     bourbon (2.1.2)
       sass (>= 3.2)
@@ -95,6 +96,15 @@ GEM
       actionpack (>= 3.0)
     gherkin (2.11.5)
       json (>= 1.4.6)
+    grape (0.2.2)
+      activesupport
+      hashie (~> 1.2)
+      multi_json (>= 1.3.2)
+      multi_xml
+      rack
+      rack-accept
+      rack-mount
+      virtus
     guard (1.5.3)
       listen (>= 0.4.2)
       lumberjack (>= 1.0.2)
@@ -106,6 +116,7 @@ GEM
     guard-rspec (1.1.0)
       guard (>= 1.1)
     has_scope (0.5.1)
+    hashie (1.2.0)
     hike (1.2.1)
     i18n (0.6.1)
     inherited_resources (1.3.1)
@@ -141,6 +152,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.19)
     multi_json (1.3.7)
+    multi_xml (0.5.1)
     nokogiri (1.5.5)
     orm_adapter (0.4.0)
     pg (0.14.1)
@@ -152,8 +164,12 @@ GEM
       method_source (~> 0.8)
       slop (~> 3.3.1)
     rack (1.4.1)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-mount (0.8.3)
+      rack (>= 1.0.0)
     rack-ssl (1.3.2)
       rack
     rack-test (0.6.2)
@@ -228,6 +244,8 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    virtus (0.5.2)
+      backports (~> 2.6.1)
     warden (1.2.1)
       rack (>= 1.0)
     xpath (0.1.4)
@@ -242,6 +260,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   foreman
+  grape
   guard-cucumber
   guard-rspec
   jquery-rails

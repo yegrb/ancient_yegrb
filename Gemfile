@@ -61,3 +61,6 @@ end
 
 # To use debugger
 # gem 'debugger'
+
+# API gems
+gem 'grape'
