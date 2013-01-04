@@ -1,5 +1,13 @@
+var fs = require('fs');
+
 module.exports = function( grunt ) {
   'use strict';
+
+  // Read host specific configuration
+  //
+  // This includes Amazon S3 credentials
+  var host_config = JSON.parse(fs.readFileSync('host-config.json'));
+
   //
   // Grunt configuration:
   //
@@ -163,7 +171,52 @@ module.exports = function( grunt ) {
       optimize: 'none',
       baseUrl: './scripts',
       wrap: true
+    },
+
+    // Configure S3 for uploading site to production
+    s3: {
+      key: host_config.s3.key,
+      secret: host_config.s3.secret,
+      bucket:'yegrb.com',
+      access:'public-read',
+
+      // Files to upload
+      upload: [
+        {
+          src:'dist/*',
+          dest: ''
+        },
+        {
+          src:'dist/scripts/*',
+          dest: 'scripts'
+        },
+        {
+          src:'dist/scripts/vendor/*',
+          dest: 'scripts/vendor'
+        },
+        {
+          src:'dist/scripts/controllers/*',
+          dest: 'scripts/controllers'
+        },
+        {
+          src:'dist/scripts/directives/*',
+          dest: 'scripts/directives'
+        },
+        {
+          src:'dist/scripts/services/*',
+          dest: 'scripts/services'
+        },
+        {
+          src:'dist/styles/*',
+          dest: 'styles'
+        },
+        {
+          src:'dist/views/*',
+          dest: 'views'
+        }
+      ]
     }
+
   });
 
   // Alias the `test` task to run `testacular` instead
@@ -174,4 +227,7 @@ module.exports = function( grunt ) {
       done(err);
     });
   });
+
+  // Register S3 tasks
+  grunt.loadNpmTasks('grunt-s3');
 };

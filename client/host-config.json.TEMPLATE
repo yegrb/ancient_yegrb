@@ -1,0 +1,3 @@
+{ "s3":
+  { "key":"<your Amazon access key>",
+    "secret":"<your Amazon access key secret>" } }
