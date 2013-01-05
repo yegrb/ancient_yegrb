@@ -2,3 +2,4 @@ temp
 .sass-cache
 dist
 host-config.json
+node_modules
