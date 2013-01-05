@@ -177,7 +177,7 @@ module.exports = function( grunt ) {
     s3: {
       key: host_config.s3.key,
       secret: host_config.s3.secret,
-      bucket:'yegrb.com',
+      bucket:'beta.yegrb.com',
       access:'public-read',
 
       // Files to upload
