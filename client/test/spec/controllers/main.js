@@ -20,7 +20,7 @@ describe('Controller: MainCtrl', function() {
     deferred = $q.defer();
 
     mockEvents = {
-      requestNextEvent: function() {
+      nextEvent: function() {
         var self = this;
 
         deferred.promise.then(function() {
@@ -39,7 +39,7 @@ describe('Controller: MainCtrl', function() {
         return deferred.promise;
       }
     };
-    spyOn(mockEvents, 'requestNextEvent').andCallThrough();
+    spyOn(mockEvents, 'nextEvent').andCallThrough();
 
     MainCtrl = $controller('MainCtrl', {
       $scope: scope,
@@ -48,7 +48,7 @@ describe('Controller: MainCtrl', function() {
   }));
 
   it('should request the next event', function() {
-    expect(mockEvents.requestNextEvent).toHaveBeenCalled();
+    expect(mockEvents.nextEvent).toHaveBeenCalled();
   });
 
   it('should attach the nextEvent to the scope', function() {

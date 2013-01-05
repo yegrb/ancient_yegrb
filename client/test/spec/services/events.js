@@ -13,11 +13,11 @@ describe('Service: events', function () {
     rootScope = $rootScope;
   }));
 
-  describe('requestNextEvent', function() {
+  describe('nextEvent', function() {
     it('returns a promise that is resolved with the value of the next event', function () {
       var next_event;
       
-      events.requestNextEvent().then(function(e) {
+      events.nextEvent().then(function(e) {
         next_event = e;
       });
 
