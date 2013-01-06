@@ -81,7 +81,10 @@ module.exports = function( grunt ) {
     lint: {
       files: [
         'Gruntfile.js',
-        'app/scripts/**/*.js',
+        'app/scripts/services/*.js',
+        'app/scripts/controllers/*.js',
+        'app/scripts/directives/*.js',
+        'app/scripts/*.js',
         'spec/**/*.js'
       ]
     },
