@@ -77,16 +77,16 @@ module.exports = function( grunt ) {
     },
 
     // default lint configuration, change this to match your setup:
-    // https://github.com/cowboy/grunt/blob/master/docs/task_lint.md#lint-built-in-task
+    // https://github.com/gruntjs/grunt/blob/0.3-stable/docs/task_lint.md
     lint: {
       files: [
-        'Gruntfile.js',
         'app/scripts/services/*.js',
         'app/scripts/controllers/*.js',
         'app/scripts/directives/*.js',
         'app/scripts/*.js',
         'spec/**/*.js'
-      ]
+      ],
+      grunt: 'Gruntfile.js'
     },
 
     // specifying JSHint options and globals
@@ -103,10 +103,17 @@ module.exports = function( grunt ) {
         undef: true,
         boss: true,
         eqnull: true,
-        browser: true
+        browser: true,
+        globalstrict: true
       },
       globals: {
-        angular: true
+        angular: true,
+        clientApp: true
+      },
+      grunt: {
+        options: {
+          node: true
+        }
       }
     },
 
