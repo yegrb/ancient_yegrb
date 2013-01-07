@@ -64,3 +64,4 @@ end
 
 # API gems
 gem 'grape'
+gem 'rack-cors', :require => 'rack/cors'

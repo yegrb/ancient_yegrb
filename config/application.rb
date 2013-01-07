@@ -61,5 +61,13 @@ module YegrbCom
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Configure Rack CORS so that other sites can access our API
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '/api/*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
   end
 end
