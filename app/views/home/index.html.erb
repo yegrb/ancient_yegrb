@@ -2,8 +2,8 @@
 <article>
 <h1>Next Event</h1>
 <% if @next_event %>
-  <h2><%= @next_event.name %> on <span class="event-start-date"><%= l(@next_event.starts, :format => :date_only) %></span></h2>
-  <h3><%= @next_event.location %></h3>
+  <h2><%= @next_event.name %> on <span class="event-start-date"><%= l(@next_event.starts_on, :format => :date_only) %></span></h2>
+  <h3><%= @next_event.venue_address %></h3>
   <div><%=@next_event.description %></div>
   <div><%=@next_event.attendees.count %> <%= "attendee".pluralize(@next_event.attendees.count) %> </div>
   <div>

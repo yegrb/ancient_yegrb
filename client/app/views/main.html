@@ -1,10 +1,10 @@
 <div class="hero-unit next-event event">
-	<event-date time="nextEvent.startsOn"></event-date>
+	<event-date time="nextEvent.starts_on"></event-date>
 	<div class="details">
 		<h1>{{ nextEvent.name }}</h1>
-		<p class="venue"><a href="{{ nextEvent.venueUrl }}" class="address">{{ nextEvent.venueAddress }}</a></p>
+		<p class="venue"><a href="{{ nextEvent.venue_url }}" class="address">{{ nextEvent.venue_address }}</a></p>
 		<p>{{ nextEvent.description }}</p>
-		<p><a class="rsvp btn btn-primary" href="{{ nextEvent.rsvpUrl }}">RSVP</a></p>
+		<p><a class="rsvp btn btn-primary" href="{{ nextEvent.rsvp_url }}">RSVP</a></p>
 	</div>
 </div>
 
