@@ -9,11 +9,7 @@ describe('Service: events', function () {
   var events, rootScope, $httpBackend;
 
   beforeEach(module(function($provide) {
-    $provide.service("env", function() {
-      return {
-        api_url: 'http://localhost:3000/api'
-      };
-    });
+    $provide.value('env', 'development');
   }));
 
   beforeEach(inject(function(_events_, $rootScope, _$httpBackend_) {

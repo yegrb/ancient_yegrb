@@ -10,4 +10,5 @@ var clientApp = angular.module('clientApp', [])
       .otherwise({
         redirectTo: '/'
       });
-  }]);
+  }]).
+  value('env', 'development');

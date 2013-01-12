@@ -1,8 +1,8 @@
 'use strict';
 
-clientApp.factory('events', [ "$q", "$http", "env", function($q, $http, env) {
+clientApp.factory('events', [ "$q", "$http", "config", function($q, $http, config) {
 
-  var events_url = env.api_url + "/events";
+  var events_url = config.api_url + "/events";
 
   // Public API here
   return {
