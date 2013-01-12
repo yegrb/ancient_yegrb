@@ -10,5 +10,10 @@ var clientApp = angular.module('clientApp', [])
       .otherwise({
         redirectTo: '/'
       });
-  }]).
-  value('env', 'development');
+  }]);
+
+if (window.location.hostname === "localhost") {
+  clientApp.value('env', 'development');
+} else {
+  clientApp.value('env', 'production');
+}
