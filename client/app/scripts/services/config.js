@@ -11,6 +11,11 @@ clientApp.factory('config', [ 'env', function(env) {
     api_url: 'http://localhost:3000/api'
   };
 
+  // We're running in development
+  config['production'] = {
+    api_url: 'http://api.yegrb.com/api'
+  };
+
   // Public API here
   return config[env];
 } ] );
