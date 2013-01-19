@@ -3,7 +3,7 @@
 	<div class="details">
 		<h1>{{ nextEvent.name }}</h1>
 		<p class="venue"><a href="{{ nextEvent.venue_url }}" class="address">{{ nextEvent.venue_address }}</a></p>
-		<p>{{ nextEvent.description }}</p>
+		<p ng-bind-html-unsafe="nextEvent.description"></p>
 		<p><a class="rsvp btn btn-primary" href="{{ nextEvent.rsvp_url }}">RSVP</a></p>
 	</div>
 </div>
